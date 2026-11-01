@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+  </Folder>
+  <Folder Name="/Tests/">
+    <Project Path="Tests/Pure.RelationalSchema.Storage.PureQL.Projection.Parameters.Abstractions.Serialization.Tests/Pure.RelationalSchema.Storage.PureQL.Projection.Parameters.Abstractions.Serialization.Tests.csproj" />
+  </Folder>
+  <Project Path="Pure.RelationalSchema.Storage.PureQL.Projection.Parameters.Abstractions.Serialization/Pure.RelationalSchema.Storage.PureQL.Projection.Parameters.Abstractions.Serialization.csproj" />
+</Solution>
