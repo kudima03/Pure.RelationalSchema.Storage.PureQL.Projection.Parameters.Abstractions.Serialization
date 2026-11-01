@@ -38,7 +38,7 @@ Read results are internal `*JsonModel` records over `Pure.Primitives` (`String`,
 
 **Documentation:** `GenerateDocumentationFile` is on, so public members need XML doc comments (CS1591).
 
-**Package validation:** `EnablePackageValidation = true`. After the first release, set `PackageValidationBaselineVersion` to the last published version; breaking API changes against it then fail the build.
+**Package validation:** `EnablePackageValidation = true`, with `PackageValidationBaselineVersion` set to the last published version (bump it after each release); breaking API changes against it fail the build.
 
 **Publishing:** triggered by pushing a semver tag matching `*.*.*`. The tag name becomes the `PackageVersion`. Packages are published to both GitHub Packages and NuGet.org.
 
