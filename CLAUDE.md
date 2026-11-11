@@ -34,7 +34,7 @@ This is a **serialization library**: `System.Text.Json` converters for the inter
 
 Read results are internal `*JsonModel` records over `Pure.Primitives` (`String`, `True`, `False`). Property names are fixed camel case. Unknown properties are skipped; missing required properties and wrong token types (`null` included) throw `JsonException` with the messages built in `Utf8JsonReaderExtensions`. Tests assert those messages, so a message change needs a test change.
 
-**Multi-targeting:** net8.0, net9.0, net10.0. `IsAotCompatible` is `true`: trim and AOT analyzer warnings fail the build under `-warnaserror`.
+**Multi-targeting:** net8.0, net9.0, net10.0, net11.0. `IsAotCompatible` is `true`: trim and AOT analyzer warnings fail the build under `-warnaserror`.
 
 **Documentation:** `GenerateDocumentationFile` is on, so public members need XML doc comments (CS1591).
 
@@ -42,7 +42,7 @@ Read results are internal `*JsonModel` records over `Pure.Primitives` (`String`,
 
 **Publishing:** triggered by pushing a semver tag matching `*.*.*`. The tag name becomes the `PackageVersion`. Packages are published to both GitHub Packages and NuGet.org.
 
-**Tests:** xUnit project at `src/Tests/Pure.RelationalSchema.Storage.PureQL.Projection.Parameters.Abstractions.Serialization.Tests/`, targeting net10.0. It exercises the converters only through `PureQLParametersConverters` and `JsonSerializer`, with doubles in `Fakes/` and, to check the built list value, the published `Pure.RelationalSchema.Storage.PureQL.Projection.Parameters`. CI enforces ≥98% line coverage (warning below 99%) and a 98% mutation score with dotnet-stryker.
+**Tests:** xUnit project at `src/Tests/Pure.RelationalSchema.Storage.PureQL.Projection.Parameters.Abstractions.Serialization.Tests/`, targeting net11.0. It exercises the converters only through `PureQLParametersConverters` and `JsonSerializer`, with doubles in `Fakes/` and, to check the built list value, the published `Pure.RelationalSchema.Storage.PureQL.Projection.Parameters`. CI enforces ≥98% line coverage (warning below 99%) and a 98% mutation score with dotnet-stryker.
 
 ## Code Style
 
